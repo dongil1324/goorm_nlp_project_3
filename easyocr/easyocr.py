@@ -370,7 +370,7 @@ class Reader(object):
         else:
             return result
 
-    def readtext(self, image, decoder = 'greedy', beamWidth= 5, batch_size = 1,\
+    def readtext(self, image, decoder = 'beamsearch', beamWidth= 5, batch_size = 1,\
                  workers = 0, allowlist = None, blocklist = None, detail = 1,\
                  rotation_info = None, paragraph = False, min_size = 20,\
                  contrast_ths = 0.1,adjust_contrast = 0.5, filter_ths = 0.003,\

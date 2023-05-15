@@ -90,3 +90,8 @@ def pt_detect(path, device, models, ciou, reader, gray=False, byteMode=False):
         result_line.append(line)
         i += 1
     print('-------------------------------')
+    save_path = path.split('/')[0] + '/result/' + path.split('/')[1].split('.')[0] + '_result.txt'
+    with open(save_path, 'w') as f:
+        f.write(f'----------- {path} -----------\n')
+        for idx, r_line in enumerate(result_line):
+            f.write(f'{label_list[idx]} : {r_line}\n')

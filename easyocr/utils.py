@@ -1,3 +1,4 @@
+#-*- coding: utf-8 -*-
 from __future__ import print_function
 
 import torch
@@ -683,7 +684,7 @@ def printProgressBar (prefix = '', suffix = '', decimals = 1, length = 100, fill
         percent = ("{0:." + str(decimals) + "f}").format(progress * 100)
         filledLength = int(length * progress)
         bar = fill * filledLength + '-' * (length - filledLength)
-        print(f'\r{prefix} |{bar}| {percent}% {suffix}', end = printEnd)
+        print('progress 진행중..')
 
     return progress_hook
 
